@@ -4,4 +4,3 @@ function [val] = maxAbsSignado(vec)
 [v,index] = max(abs(vec));
 val = vec(index);
 end
-
