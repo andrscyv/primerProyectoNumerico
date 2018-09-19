@@ -1,0 +1,13 @@
+function [sigmai ,qi] = metodo_potencia(A, q0, k, tol)
+%METODO POTENCIA implementacion del metodo de la potencia
+%   
+%
+qi = A*q0;
+[m, i] = max(q0);
+sigmai
+for i = 1:k;
+    i
+end
+
+end
+
