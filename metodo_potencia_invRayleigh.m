@@ -12,7 +12,6 @@ while (ind <= k) && (err > norm(qi)*10^(-7))
     qi = qi/sigmai;
     ind = ind+1;
     err = norm(A*qi - shift*qi);
-   % radioConvergencia = radioC(qi, q0, vecRef)
 end
 %ind
 sigmai = 1/sigmai+shift;
