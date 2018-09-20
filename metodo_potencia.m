@@ -14,6 +14,6 @@ while (ind <= k) && (err > tol)
     ind = ind+1;
     err = abs(sigmai - sigma0) / abs(sigma0);
 end
-ind
+%ind
 end
 

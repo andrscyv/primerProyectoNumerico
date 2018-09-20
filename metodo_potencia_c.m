@@ -14,7 +14,7 @@ while (ind <= k) && (err > tol)
     qi = qi/sigmai;
     ind = ind+1;
     err = abs(sigmai - sigma0) / abs(sigma0);
-    radioConvergencia = norm(qi - vecReferencia,inf)/norm(q0-vecReferencia,inf)
+    radioConvergencia = radioC(qi,q0,vecReferencia)
 end
 %ind
 end
