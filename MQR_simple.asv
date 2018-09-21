@@ -1,0 +1,19 @@
+function [lambdas,Q] = MQR_simple(A, k, tol)
+
+[m,n] =size(A);
+
+Q = eye(m,m);
+Qbar=Q;
+R = A;
+cont = 0;
+
+while(cont<k)
+    [Q,R] = qr(R*Q);
+    Qbar = Qbar*Q;
+    cont = cont +1;
+end
+lambdas = diag(R*Q);
+Q = Qbar;
+
+end
+
