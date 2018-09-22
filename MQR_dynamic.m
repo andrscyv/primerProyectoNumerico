@@ -12,7 +12,7 @@ while index > 1
         contComp = contComp + 1;
         del = 1/2*( A(index-1,index-1)-A(index,index));
         signDel = del/abs(del);
-        %shift = A(index, index)-signDel*(A(index-1,index)^2/(abs(del)+sqrt(del^2+A(index-1,index)^2)));
+        %shift = A(index, index)-signDel*(A(index-1,index)^2/(abs(del)+sqrt(del^2+A(index,index-1)^2)));
         shift = A(index,index);
         identidad = eye(index);
         [Q, R] = qr(A-shift*identidad);
