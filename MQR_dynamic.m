@@ -9,7 +9,9 @@ while index > 1
     contComp = 0;
     while max(abs(A(index,1:index-1))) > tol && contComp < contCompTol
         contComp = contComp + 1;
-        shift = A(index, index);
+        del = 1/2*( A(index-1,index-1)-A(index,index));
+        signDel = del/abs(del);
+        shift = A(index, index)-signDel*(A(index-1,index)^2/(abs(del)+sqrt(del^2+A(index-1,index)^2)));
         identidad = eye(index);
         [Q, R] = qr(A-shift*identidad);
         A =R*Q+shift*identidad;
@@ -26,4 +28,7 @@ while index > 1
         A = A(1:index,1:index);
     end
 end
-if index > 0; lambdas(1,1) = A(1,1);end
+if index > 0 
+    lambdas(1,1) = A(1,1);
+end
+[lambdas, I] = sort(abs(lambdas),'descend');
