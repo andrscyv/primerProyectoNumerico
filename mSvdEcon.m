@@ -1,5 +1,7 @@
 function [U, S, V, r] = mSvdEcon (A)
-  cutOff = 4500;
+  cutOff = 2000;
+  %cutOff = 4500;
+  %cutOff = 10000;
   [m n] = size(A);
   if comparaMatrices(A,A') == 0  %matrices diferentes
     if n <= m
