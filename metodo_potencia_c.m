@@ -5,7 +5,7 @@ function [sigmai ,qi] = metodo_potencia_c(A, q0, k, tol,vecReferencia)
 % 	q0 es un vector que se va a ir aproximando al eigenvector dominante
 %	k es el número máximo de iteraciones
 %	tol es el número de dígitos de precisión que se quieren
-%	vecReferencia es el eigenvector	normado al que va a converger el método (el dominante)
+%	vecReferencia es el eigenvector	normalizado al que va a converger el método (el dominante)
 qi = q0;
 err = inf;
 ind = 1;
