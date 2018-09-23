@@ -1,6 +1,6 @@
 function [val] = maxAbsSignado(vec)
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
+%Regresa el valor absoluto más grande del vector con su signo original
+%   vec	es el vector que se desea, puede ser real o imaginario
 [v,index] = max(abs(vec));
 val = vec(index);
 end

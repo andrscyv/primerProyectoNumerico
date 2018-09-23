@@ -1,5 +1,6 @@
 function [resp] = comparaMatrices (A, B) 
-% A,B con misma dimensión
+%Regresa BOOLEANO si las matrices A y B son iguales o no.
+% 	A,B matrices con misma dimensión
   resp = 1;
   [m,n]=size(A);
   i=1;

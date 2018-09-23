@@ -1,6 +1,6 @@
 function [G] = google(A)
-%UNTITLED3 Summary of this function goes here
-%   Detailed explanation goes here
+%Regresa la matriz de google
+%   A es la matriz de adyacencia de los nodos (páginas) 
 n = size(A,1);
 G = zeros(n);
 q = 0.15;

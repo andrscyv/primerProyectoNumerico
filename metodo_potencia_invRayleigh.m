@@ -1,8 +1,10 @@
 function [sigmai,qi] = metodo_potencia_invRayleigh(A, q0, k)
 %Metodo de potencia inversa con shift dinamico de Rayleigh
-%   
+%   A matriz a la cual se le aplica el método
+%	q0 primer vector que se va a ir modificando
+%	k es el número máximo de itreaciones
 qi = q0;
-err = inf;
+err = inf; %error colocado  en infinito para que siempre entre por primera vez
 ind = 1;
 sigmai = maxAbsSignado(qi);
 while (ind <= k) && (err > norm(qi)*10^(-7))
